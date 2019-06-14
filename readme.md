@@ -1,7 +1,7 @@
-#Section6 Task
-##Running
+# Section6 Task
+## Running
 To run the code, first run `npm i` to install the necessary packages, then `npm run build` to build the app. `npm run start` will start the local server 
-##Questions
+## Questions
 - What challenges did you encounter during the timestamp conversion? How did you resolve these?
 >I was already used to do this type of conversions on my last job, so I knew the package "moment.js" could handle it pretty well. Needed to add the package "moment-timezone.js" to be able to add the literal format of the timezone (ie NZST) as well as ignoreCache in the cases the timezone of the user changes.
 - Were there any details where you had to make assumptions or decide to implement imperfectly?
