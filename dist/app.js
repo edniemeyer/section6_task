@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes_1 = require("routes");
+const routes_1 = require("./routes");
 class App {
     constructor() {
         this.route = new routes_1.Routes();
