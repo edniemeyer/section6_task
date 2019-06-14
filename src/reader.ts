@@ -7,8 +7,8 @@ let data = [];
 fs.createReadStream("./src/timezone.csv")
     .pipe(csv())
     .on('data', (row) => {
-        console.log(row.timestamp_utc);
-        console.log(moment(Number(row.timestamp_utc)).tz(moment.tz.guess()).format("DD/MM/YYYY hh:mm z ZZ").toString());
+        // tz.guess(true) will ignore cache when guessing timezone of the user
+        console.log(moment(Number(row.timestamp_utc)).tz(moment.tz.guess(true)).format("DD/MM/YYYY hh:mm z ZZ").toString());
         data.push(row);
     })
     .on('end', () => {
