@@ -8,6 +8,18 @@ class Routes {
                 message: 'GET request successfulll!'
             });
         });
+        app.route('/all')
+            .get((req, res) => {
+            res.status(200).send({
+                message: 'GET request successfulll!'
+            });
+        });
+        app.route('/timezone/:id')
+            .get((req, res) => {
+            res.status(200).send({
+                message: 'GET request successfulll!'
+            });
+        });
     }
 }
 exports.Routes = Routes;

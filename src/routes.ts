@@ -7,6 +7,18 @@ export class Routes {
             res.status(200).send({
                 message: 'GET request successfulll!'
             })
-        })               
+        })
+        app.route('/all')
+        .get((req: Request, res: Response) => {            
+            res.status(200).send({
+                message: 'GET request successfulll!'
+            })
+        })
+        app.route('/timezone/:id')
+        .get((req: Request, res: Response) => {            
+            res.status(200).send({
+                message: 'GET request successfulll!'
+            })
+        })  
     }
 }
