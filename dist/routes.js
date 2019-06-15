@@ -13,12 +13,12 @@ class Routes {
             });
         });
         app.route('/all')
-            .get(this.timezoneController.readAll);
+            .get((req, res) => {
+            res.json(this.timezoneController.readAll());
+        });
         app.route('/timezone/:id')
             .get((req, res) => {
-            res.status(200).send({
-                message: 'GET request successfulll!'
-            });
+            res.json(this.timezoneController.getId(req.params.id));
         });
     }
 }

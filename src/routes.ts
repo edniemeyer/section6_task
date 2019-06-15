@@ -12,12 +12,12 @@ export class Routes {
                 })
             })
         app.route('/all')
-            .get(this.timezoneController.readAll)
+            .get((req: Request, res: Response) => {
+                res.json(this.timezoneController.readAll());
+            })
         app.route('/timezone/:id')
             .get((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'GET request successfulll!'
-                })
+                res.json(this.timezoneController.getId(req.params.id));
             })
     }
 }
