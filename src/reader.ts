@@ -35,6 +35,6 @@ export class TimezoneController {
     }
 
     public getId(id: string) {
-        return this.df.filter(row => row.get("id") == id);
+        return this.df.filter(row => row.get("id") == id).select("date");
     }
 }

@@ -28,7 +28,7 @@ class TimezoneController {
         return this.df.toJSON();
     }
     getId(id) {
-        return this.df.filter(row => row.get("id") == id);
+        return this.df.filter(row => row.get("id") == id).select("date");
     }
 }
 exports.TimezoneController = TimezoneController;
