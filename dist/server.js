@@ -22,7 +22,7 @@ wss.on('connection', (ws) => {
 });
 //start our server
 server.listen(8999, () => {
-    console.log(`Server started on port 8999 :)`);
+    console.log(`HTTP Server started on port 8999`);
 });
 app_1.default.listen(PORT, () => {
     console.log('Express server listening on port ' + PORT);

@@ -19,5 +19,9 @@ export class Routes {
             .get((req: Request, res: Response) => {
                 res.json(this.timezoneController.getId(req.params.id));
             })
+        app.route('/distances')
+            .get((req: Request, res: Response) => {
+                res.json(this.timezoneController.calculateDistance());
+            })
     }
 }

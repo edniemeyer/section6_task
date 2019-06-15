@@ -19,6 +19,7 @@
     "dataframe-js": "^1.4.1",
     "express": "^4.17.1",
     "geo-tz": "^5.0.4",
+    "haversine": "^1.1.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.25",
     "nodemon": "^1.19.1",

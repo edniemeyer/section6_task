@@ -20,6 +20,10 @@ class Routes {
             .get((req, res) => {
             res.json(this.timezoneController.getId(req.params.id));
         });
+        app.route('/distances')
+            .get((req, res) => {
+            res.json(this.timezoneController.calculateDistance());
+        });
     }
 }
 exports.Routes = Routes;
